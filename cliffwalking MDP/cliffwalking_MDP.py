@@ -215,8 +215,9 @@ def calculateScore(inp):
 
 def changeScore(kp, ks, v1, v2, v3):
     global states
-    score = (v1 + v2 + v3) / 3
-    change = score - states[kp][ks]
+    calc = 0.9 * (v1/3 + v2/3 + v3/3)
+    score =+ calc
+    change = calc
     states[kp][ks] = score
     return abs(change)
 
